@@ -1,0 +1,11 @@
+# kamel run --open-api openapi-spec.yaml upload.yaml
+- from:
+    uri: "direct:upload"
+    steps:
+      - convert-body-to: "java.lang.String"
+      - transform:
+          simple: "${body.toUpperCase()}"
+      - set-header:
+          name: "CamelHttpResponseCode"
+          constant: "202"
+      - to: "log:info"

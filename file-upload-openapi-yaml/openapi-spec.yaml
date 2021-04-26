@@ -1,0 +1,19 @@
+openapi: 3.0.2
+info:
+    title: Upload API
+    version: 1.0.0 
+paths:
+    /upload:
+        post:
+            requestBody:
+                content:
+                    application/octet-stream:
+                        schema:
+                            format: binary
+                            type: string
+                required: true
+            responses:
+                '202':
+                    description: File upload accepted
+            operationId: upload
+            summary: upload file

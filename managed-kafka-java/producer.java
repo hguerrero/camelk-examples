@@ -1,3 +1,6 @@
+// how-to-run: kamel run --property-file managed-kafka.properties producer.java
+// camel-k: language=java dependency=mvn:org.apache.kafka:kafka-clients:2.7.0
+
 import org.apache.camel.builder.RouteBuilder;
 /**
  * producer
